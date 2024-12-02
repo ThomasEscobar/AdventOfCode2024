@@ -5,7 +5,7 @@ namespace AdventOfCode.Logging;
 
 public class CustomLogging
 {
-    public static Logger Init(string outputFilePath = null)
+    public static Logger Init(string? outputFilePath = null)
     {
         var loggerConfig = new LoggerConfiguration();
 

@@ -2,7 +2,7 @@ namespace AdventOfCode.ToolBox;
 
 public static class ToolBoxClass
 {
-    public static List<int> GetIntListFromInput(string inputFilePath = null)
+    public static List<int> GetIntListFromInput(string? inputFilePath = null)
     {
         if (!File.Exists(inputFilePath))
         {
@@ -28,7 +28,7 @@ public static class ToolBoxClass
         return list;
     }
 
-    public static List<double> GetDoubleListFromInput(string inputFilePath = null)
+    public static List<double> GetDoubleListFromInput(string? inputFilePath = null)
     {
         if (!File.Exists(inputFilePath))
         {
@@ -54,7 +54,7 @@ public static class ToolBoxClass
         return list;
     }
 
-    public static List<string> GetStringListFromInput(string inputFilePath = null)
+    public static List<string> GetStringListFromInput(string? inputFilePath = null)
     {
         if (!File.Exists(inputFilePath))
         {

@@ -9,7 +9,9 @@ class AdventOfCode
         var logger = CustomLogging.Init("logfile.txt");
         logger.Information("Welcome to Thomas' Advent Of Code 2024 project !");
 
-        // Day 1
-        new Day1.Solver("Day1/input.txt", logger).Solve();
+        // TODO: Figure out input parameter to select: day, example or not
+
+        // Day 2
+        new Day2.Solver("Day2/input.txt", logger).Solve();
     }
 }

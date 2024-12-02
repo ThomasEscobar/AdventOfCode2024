@@ -50,8 +50,8 @@ public class Solver
         foreach (var l in input)
         {
             var split = l.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-            leftList.Add(split.FirstOrDefault());
-            rightList.Add(split.LastOrDefault());
+            leftList.Add(split.First());
+            rightList.Add(split.Last());
         }
 
         // Sort the lists
@@ -78,8 +78,8 @@ public class Solver
         foreach (var l in input)
         {
             var split = l.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-            leftList.Add(split.FirstOrDefault());
-            rightList.Add(split.LastOrDefault());
+            leftList.Add(split.First());
+            rightList.Add(split.Last());
         }
 
         // Calculate and add up similarity score for each nb in left list
@@ -87,7 +87,7 @@ public class Solver
         foreach (var str in leftList)
         {
             var x = int.Parse(str);
-            sum += x * rightList.Where(y => x == int.Parse(y)).Count();
+            sum += x * rightList.Count(y => x == int.Parse(y));
         }
 
         logger.Information($"The total similarity score is: {sum}");
