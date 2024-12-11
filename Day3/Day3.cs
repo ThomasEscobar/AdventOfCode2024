@@ -1,7 +1,9 @@
 using System.Diagnostics;
-using Serilog.Core;
-using AdventOfCode.ToolBox;
 using System.Text.RegularExpressions;
+
+using AdventOfCode.ToolBox;
+
+using Serilog.Core;
 
 namespace AdventOfCode.Day3;
 
@@ -43,7 +45,7 @@ public class Solver
 
     public void SolvePart1()
     {
-        logger.Information("PART 1 - Sum of all the multiplcation instructions");
+        logger.Information("PART 1 - Sum of all the multiplication instructions");
 
         var r = new Regex(@"mul\(([0-9]+),([0-9]+)\)");
         var sum = 0;

@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using System.Text.RegularExpressions;
 
 using AdventOfCode.ToolBox;
 
@@ -121,7 +120,8 @@ public class Solver
                     if (input[y - dy][x - dx] != 'M') continue;
                     if (input[y + dy][x + dx] != 'S') continue;
 
-                    // Look for diagonal MAS in the perpendicular direction, i.e. inverted X and Y
+                    // Look for diagonal MAS in the perpendicular directions, i.e. inverted X or Y
+                    // E.g. For direction vector (1,1), the perpendicular directions are (1,-1) and (-1,1)
                     if (input[y - dy][x + dx] != 'M' && input[y + dy][x - dx] != 'M') continue;
                     if (input[y + dy][x - dx] != 'S' && input[y - dy][x + dx] != 'S') continue;
 
