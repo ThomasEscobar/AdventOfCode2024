@@ -5,11 +5,11 @@ namespace AdventOfCode.Logging;
 
 public class CustomLogging
 {
-    public static Logger Init(string? outputFilePath = null)
+    public static Logger Init(string? outputFilePath = null, bool verbose = false)
     {
         var loggerConfig = new LoggerConfiguration();
 
-        loggerConfig = loggerConfig.MinimumLevel.Verbose();
+        loggerConfig = verbose ? loggerConfig.MinimumLevel.Verbose() : loggerConfig.MinimumLevel.Information();
 
         // Add file as a target
         if (!string.IsNullOrEmpty(outputFilePath))

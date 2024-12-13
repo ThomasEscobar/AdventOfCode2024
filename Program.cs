@@ -6,14 +6,14 @@ class AdventOfCode
 {
     static void Main(string[] args)
     {
-        var logger = CustomLogging.Init("logfile.txt");
-        logger.Information("Welcome to Thomas' Advent Of Code 2024 project !");
-
-        if (args.Length != 2)
+        if (args.Length < 2)
         {
-            logger.Error("Please select a day to solve and an input file");
-            return;
+            throw new Exception("Please select a day to solve and an input file");
         }
+
+        // If a third argument is provided (doesn't matter what atm...), enable verbose logging
+        var logger = CustomLogging.Init("logfile.txt", args.Length > 2);
+        logger.Information("Welcome to Thomas' Advent Of Code 2024 project !");
 
         // Find the class based on name
         var className = $"AdventOfCode.Day{args[0]}.Solver";
